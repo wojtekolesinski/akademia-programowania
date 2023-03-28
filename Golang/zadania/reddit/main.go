@@ -38,7 +38,7 @@ func main() {
 	for _, subreddit := range subreddits {
 		go func(sub string) {
 			defer wg.Done()
-			f = &fetcher.HttpRedditFetcher{Url: fmt.Sprintf("http://reddit.com/r/%s.json", sub), Headers: headers}
+			f = &fetcher.HttpRedditFetcher{Url: fmt.Sprintf("https://reddit.com/r/%s.json", sub), Headers: headers}
 
 			fmt.Printf("Fetching %s\n", sub)
 			ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*5000)
@@ -53,7 +53,10 @@ func main() {
 				panic(err)
 			}
 
-			f.Save(w)
+			err = f.Save(w)
+			if err != nil {
+				panic(err)
+			}
 			fmt.Printf("Saved %s\n", sub)
 		}(subreddit)
 	}
