@@ -22,4 +22,3 @@ https://www.reddit.com/r/golang.json
 1. Klient używa Context z timeoutem do połączeń HTTP z wykorzystaniem http.NewRequestWithContext()
 2. Współbieżne pobieranie innych wybranych subredditów SFW
 3. Można rozszerzyć interfejs o obsługę Contextu
-

@@ -1,0 +1,52 @@
+Who's Hiring? - March 2023
+https://www.reddit.com/r/golang/comments/11fijrn/whos_hiring_march_2023/
+Go linters configuration, the right version.
+https://olegk.dev/go-linters-configuration-the-right-version
+What is the preferred way to represent and check for an empty struct?
+https://www.reddit.com/r/golang/comments/124hjhl/what_is_the_preferred_way_to_represent_and_check/
+Go Validation Playground
+https://www.reddit.com/r/golang/comments/1243qut/go_validation_playground/
+Text similarity analysis
+https://www.reddit.com/r/golang/comments/124kk5n/text_similarity_analysis/
+Benthos Code Review - Checkpointer (Go, Generics, sync.Cond)
+https://www.youtube.com/watch?v=zd_dtrhjIQ0
+tint: 🌈 slog.Handler that writes tinted logs
+https://github.com/lmittmann/tint
+How do you gomock test a method that is importing another package in the closure function?
+https://www.reddit.com/r/golang/comments/124hybd/how_do_you_gomock_test_a_method_that_is_importing/
+Why Golang beats other runtimes like V8 engine(Node JS) even when V8 is also compiled. Initially it would be slow but after that it should be fast enough.
+https://www.reddit.com/r/golang/comments/123t4sq/why_golang_beats_other_runtimes_like_v8/
+How can I have error like `make()` if I pass more than two args
+https://www.reddit.com/r/golang/comments/124k8zx/how_can_i_have_error_like_make_if_i_pass_more/
+github.com/colega/zeropool: zero-allocation type-safe sync.Pool alternative
+https://github.com/colega/zeropool
+The state of Go's type system
+https://www.reddit.com/r/golang/comments/124i7j2/the_state_of_gos_type_system/
+End to end example API written in Go
+https://www.reddit.com/r/golang/comments/123ke83/end_to_end_example_api_written_in_go/
+Go GUI vs. Browser
+https://www.reddit.com/r/golang/comments/123fkup/go_gui_vs_browser/
+beginning in GO
+https://www.reddit.com/r/golang/comments/1248ibu/beginning_in_go/
+Any benefit to learning Python over Go for working with data?
+https://www.reddit.com/r/golang/comments/124gvjv/any_benefit_to_learning_python_over_go_for/
+RDF Libary in Golang
+https://www.reddit.com/r/golang/comments/123xk6m/rdf_libary_in_golang/
+OpenBLAS bindings for Go
+https://www.reddit.com/r/golang/comments/123oswj/openblas_bindings_for_go/
+A bit of a useful library, selling and boasting.
+https://www.reddit.com/r/golang/comments/124hv4f/a_bit_of_a_useful_library_selling_and_boasting/
+What is the default timezone for Go’s log package? (For logged messages)
+https://www.reddit.com/r/golang/comments/123d1c3/what_is_the_default_timezone_for_gos_log_package/
+Kivi - Distributed dynamo-style database for educational purposes written in Go
+https://github.com/maxpoletaev/kivi
+Where exactly should I put my golang interface at?
+https://www.reddit.com/r/golang/comments/123h3m9/where_exactly_should_i_put_my_golang_interface_at/
+Odigos now supports generating and sending OpenTelemetry data to all three major cloud providers: Google Cloud Storage, Microsoft Blob Storage and AWS S3
+https://www.reddit.com/r/golang/comments/123xen8/odigos_now_supports_generating_and_sending/
+JSON array with two different json objects
+https://www.reddit.com/r/golang/comments/123nud0/json_array_with_two_different_json_objects/
+6 ways to boost the performance of your Go applications
+https://www.reddit.com/r/golang/comments/122jnay/6_ways_to_boost_the_performance_of_your_go/
+Which CPU to buy based on profiling
+https://www.reddit.com/r/golang/comments/123dsx0/which_cpu_to_buy_based_on_profiling/
