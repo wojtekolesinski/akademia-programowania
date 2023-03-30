@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"golang.org/x/exp/slog"
 	"io"
 	"os"
 	"reddit/fetcher"
@@ -11,8 +12,8 @@ import (
 )
 
 func main() {
-	var f fetcher.RedditFetcher // do not change
-	var w io.Writer             // do not change
+	//var f fetcher.RedditFetcher // do not change
+	var w io.Writer // do not change
 
 	subreddits := []string{
 		"golang",
@@ -26,6 +27,7 @@ func main() {
 		"pokemon",
 		"minecraft",
 		"skyrim",
+		"asdfssdaa",
 	}
 
 	headers := map[string]string{
@@ -38,29 +40,32 @@ func main() {
 	for _, subreddit := range subreddits {
 		go func(sub string) {
 			defer wg.Done()
-			f = &fetcher.HttpRedditFetcher{Url: fmt.Sprintf("https://reddit.com/r/%s.json", sub), Headers: headers}
+			f := &fetcher.HttpRedditFetcher{Url: fmt.Sprintf("https://reddit.com/r/%s.json", sub), Headers: headers}
 
-			fmt.Printf("Fetching %s\n", sub)
-			ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*5000)
+			slog.Info(fmt.Sprintf("Fetching %s\n", sub))
+			ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*1000)
 			defer cancel()
 			err := f.FetchWithContext(ctx)
 			if err != nil {
-				panic(err)
+				slog.Error(err.Error())
+				return
 			}
 
 			w, err = os.Create(fmt.Sprintf("./data/%s.txt", sub))
 			if err != nil {
-				panic(err)
+				slog.Error(err.Error())
+				return
 			}
 
 			err = f.Save(w)
 			if err != nil {
-				panic(err)
+				slog.Error(err.Error())
+				return
 			}
-			fmt.Printf("Saved %s\n", sub)
+			slog.Info(fmt.Sprintf("Saved %s\n", sub))
 		}(subreddit)
 	}
 	wg.Wait()
 
-	fmt.Println("DONE")
+	slog.Info("DONE")
 }
